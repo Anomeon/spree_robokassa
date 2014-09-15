@@ -76,6 +76,8 @@ module Spree
       @notification = @payment_method.provider_class::Notification.new(request.raw_post, :secret => @payment_method.preferred_password2)
     end
 
-
+    def params
+      params.require(Spree::BillingIntegration::Robokassa).permit(:preferred_password1, :preferred_password2, :preferred_mrch_login)
+    end
   end
 end
