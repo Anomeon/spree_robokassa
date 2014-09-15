@@ -4,7 +4,7 @@ module Spree
     preference :password2, :string
     preference :mrch_login, :string
 
-    attr_accessible :preferred_password1, :preferred_password2, :preferred_mrch_login
+    # attr_accessible :preferred_password1, :preferred_password2, :preferred_mrch_login
 
     def provider_class
       ActiveMerchant::Billing::Base.integration_mode = self.mode
