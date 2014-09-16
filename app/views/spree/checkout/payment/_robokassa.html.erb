@@ -1,7 +1,7 @@
 Для выполнения платежа Вы будете перенаправлены на сайт платежной системы Robokassa.
 
 <% payment_service_for @order.id, payment_method.preferred_mrch_login,
-                        :disable_form_tag => true,
+                        # :disable_form_tag => true,
                         :amount => @order.total,
                         :service => :robokassa,
                         :secret => payment_method.preferred_password1,
